@@ -14,10 +14,10 @@
 
         public static float DivisioneNumeri(float num1, float num2)
         {
-            if (num1 == 0 || num2 == 0)
-            {
-                throw new ArgumentException("non possono essere entrambi 0");
-            }
+            //if (num1 == 0 || num2 == 0)
+            //{
+            //    throw new ArgumentException("non possono essere entrambi 0");
+            //}
             return num1 / num2;
         }
 
@@ -28,3 +28,4 @@
 
     }
 }
+

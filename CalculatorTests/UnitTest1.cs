@@ -36,6 +36,29 @@ namespace CalculatorTests
         {
             float divisione = Calc.DivisioneNumeri(num1, num2);
             Assert.That(TestResult == divisione);
+            
+        }
+        [Test]
+        [TestCase(1)]
+        [TestCase(-1)]
+        [TestCase(0)]
+        public void TestDivisioneNumeriZero(float num1)
+        {
+            if (num1 == 0)
+            {
+                Assert.That(Calc.DivisioneNumeri(num1, 0), Is.EqualTo(float.NaN));
+
+            }
+            else if (num1 > 0)
+            {
+                Assert.That(Calc.DivisioneNumeri(num1, 0), Is.EqualTo(float.PositiveInfinity));
+
+            }
+            else 
+            {
+                Assert.That(Calc.DivisioneNumeri(num1, 0), Is.EqualTo(float.NegativeInfinity));
+
+            }
         }
 
         [Test]
@@ -49,3 +72,4 @@ namespace CalculatorTests
         }
     }
 }
+

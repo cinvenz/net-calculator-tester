@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Calculator
+﻿namespace CalculatorTests
 {
-    public class Calc
+    internal class Calc
     {
         public static float SommaNumeri(float num1, float num2)
         {
@@ -20,6 +14,10 @@ namespace Calculator
 
         public static float DivisioneNumeri(float num1, float num2)
         {
+            if (num1 == 0 || num2 == 0)
+            {
+                throw new ArgumentException("non possono essere entrambi 0");
+            }
             return num1 / num2;
         }
 
